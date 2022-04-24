@@ -4,6 +4,7 @@ metadata:
   name: rtf-ingress-template
   namespace: rtf
 spec:
+  ingressClassName: rtf-nginx
   rules:
   - host: rtf-on-gke.mulesoftdemo.com
     http:
