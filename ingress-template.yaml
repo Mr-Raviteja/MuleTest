@@ -1,18 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-rtf-ingress
-  namespace: rtf 
-  labels:
+  name: rtf-ingress-template
+  namespace: rtf
 spec:
   ingressClassName: rtf-nginx
   rules:
   - host: rtf-on-gke.mulesoftdemo.com
     http:
-      paths: 
-      - pathType: Prefix
-        path: /app-name 
-        backend: 
+      paths:
+      - path: /app-name
+        pathType: Prefix
+        backend:
           service:
             name: service-name
             port:
