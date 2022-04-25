@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: test-gke-rtf-ingress-template
-  namespace: 4956d3d6-14d3-423b-9165-4a39038ad29
+  name: rtf-ingress-template
+  namespace: rtf 
 spec:
   ingressClassName: rtf-nginx
   rules:
